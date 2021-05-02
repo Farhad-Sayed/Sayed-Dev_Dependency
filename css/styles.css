@@ -1,0 +1,268 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Roboto', sans-serif;
+    font-family: 'Monoton', cursive; */
+}
+
+/* header css */
+.navbar{
+    height: 5rem;
+}
+.nav-link{
+    color: orange!important;
+}
+.logo{
+    font-family: 'Monoton', cursive; 
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: orange!important;
+}
+.last_name{
+    color: cadetblue;
+}
+
+/* hero section css */
+#hero{
+    width: 100%;
+    height: 90vh;
+    background: url("../images/hero-bg.jpg");
+    background-size: cover;
+    background-repeat: none;
+    background-position: center;
+    position: relative;
+    /* margin-top: 5rem; */
+}
+#particles-js{
+    width: 90%;
+}
+#hero::before{
+    content: '';
+    background: rgba(1, 17, 59, 0.6);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+#hero .hero-container{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.hero-container h2, h4{
+    color: #f5f5f5;
+    font-family: 'Monoton', cursive;
+    margin-bottom: 2rem;
+    word-spacing: 1px;
+}
+.hero-container h2{
+    font-size: 5rem;
+}
+.hero-container h4{
+    letter-spacing: 3px;
+}
+#hero .btn-scroll{
+    color: orange;
+    font-size: 2rem;
+    margin-top: 2rem;
+    transition: 0.4s ease;
+    animation: up-down 1s ease-in-out infinite alternate-reverse both;
+}
+#hero .btn-scroll:hover{
+    color:palevioletred;
+}
+.type{
+    color: chartreuse;
+}
+/* scroll button animation */
+@keyframes up-down{
+    0%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(- 5px);
+    }
+}
+@media (max-width: 715px) {
+    #hero h2{
+        font-size: 3rem;
+    }
+    #hero h4{
+        font-size: 1rem;
+    }
+}
+
+/* about section css */
+.profile_img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.section-title{
+    font-size: 3rem;
+    font-family: 'Monoton', cursive;
+    font-weight: 900;
+    transition: transform .3s ease;
+}
+.icon:hover{
+    transform: scale(1.1);
+}
+
+/* resume section */
+.resume .resume-title{
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: orange;
+}
+.resume .resume-des{
+    padding: 0 0 20px 20px;
+    /* margin-top: 1.5rem; */
+    border-left: 2px solid lightblue;
+    position: relative;
+}
+.resume .resume-des h4{
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: lightblue;
+    margin-bottom: 1rem;
+}
+.resume .resume-des h5{
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 5px 15px;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+.resume .resume-des ul{
+    padding-bottom: 1rem;
+}
+.resume .resume-des:last-child{
+    padding-bottom: 0;
+}
+.resume .resume-des::before{
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50px;
+    left: -9px;
+    top: 0px;
+    background: #fff;
+    border: 2px solid #82909c;
+}
+
+/* works section css */
+.projects{
+    background: #fff;
+    box-shadow: 0 0 5px #bababa;
+    position: relative;
+    margin: 10px auto;
+    overflow: hidden;
+}
+.projects .projects-content{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+.projects .projects-content::before,
+.projects .projects-content::after{
+    content: '';
+    width: 95%;
+    /* height: 47%; */
+    height: 50%;
+    background-color: darkcyan;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: all 0.5s;
+    opacity: 0;
+}
+.projects .projects-content::before{
+    top: -20%;
+}
+.projects .projects-content::after{
+    bottom: -20%;
+}
+.projects:hover .projects-content::before{
+    top: 3%;
+    top: 0;
+    opacity: 0.8;
+}
+.projects:hover .projects-content::after{
+    bottom: 3%;
+    bottom: 0;
+    opacity: 0.8;
+}
+.projects .content{
+    width: 100%;
+    height: 45px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    z-index: 1;
+    transform: rotate(90deg);
+    opacity: 0;
+    transition: all 0.5s;
+}
+.projects:hover .content{
+    opacity: 1;
+    transform: rotate(0deg);
+}
+.projects .social{
+    padding: 0;
+    margin: 0 0 20px 0;
+    list-style: none;
+}
+.projects .social li{
+    display: inline-block;
+    margin-right: 1rem;
+}
+.projects .social li a{
+    color: #000;
+    background: #fff;
+    display: block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: all 0.3s;
+}
+.projects .social li a:hover{
+    color: orange;
+}
+.projects .title{
+    font-size: 2rem;
+}
+
+/* contact css */
+#contact{
+    height: 550px;
+    background-color: #f5f5f5;
+}
+
+/* footer css */
+footer{
+    height: 80px;
+    line-height: 80px;
+}
